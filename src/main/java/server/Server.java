@@ -6,7 +6,8 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.time.LocalDateTime;
-
+import java.net.Socket;
+import java.net.ServerSocket;
 
 public class Server extends JFrame{
     private JTextArea textArea1;
@@ -40,12 +41,17 @@ public class Server extends JFrame{
 
     private void start(){
         try (ServerSocket serverSocket = new ServerSocket(8080)) {
+            writeText("Server was started");
+            startButton.setEnabled(false);
+            stopButton.setEnabled(true);
+
+            while(true){
+                Socket clientSocket= serverSocket.accept();
+            }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        writeText("Server was started");
-        startButton.setEnabled(false);
-        stopButton.setEnabled(true);
     }
 
     private void stop(){

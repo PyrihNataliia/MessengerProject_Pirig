@@ -24,7 +24,7 @@
                   <Font name="Microsoft YaHei Light" size="19.0" />
                </font>
             </TextField>
-            <Button layoutX="264.0" layoutY="216.0" mnemonicParsing="false" style="-fx-background-radius: 5;" text="Log in">
+            <Button fx:id="bt_logIn_l" layoutX="264.0" layoutY="216.0" mnemonicParsing="false" style="-fx-background-radius: 5;" text="Log in">
                <font>
                   <Font name="Microsoft YaHei" size="17.0" />
                </font>
@@ -34,7 +34,7 @@
                   <Font name="Microsoft YaHei Light" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="337.0" layoutY="265.0" mnemonicParsing="false" style="-fx-background-color: #C4A484;" text="Sign Up" textAlignment="CENTER" textFill="#1c1853" underline="true">
+            <Button fx:id="bt_signUp_l" layoutX="337.0" layoutY="265.0" mnemonicParsing="false" style="-fx-background-color: #C4A484;" text="Sign Up" textAlignment="CENTER" textFill="#1c1853" underline="true">
                <font>
                   <Font name="Microsoft YaHei" size="15.0" />
                </font>

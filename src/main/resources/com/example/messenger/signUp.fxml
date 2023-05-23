@@ -10,7 +10,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.messenger.signUpController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #6E260E;">
          <children>
@@ -68,7 +68,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button fx:id="bt_login_s" layoutX="228.0" layoutY="329.0" mnemonicParsing="false" style="-fx-background-color: #C4A484;" text="Log in" textFill="#1c1853" underline="true">
+            <Button fx:id="bt_login_s" layoutX="228.0" layoutY="329.0" mnemonicParsing="false" onAction="#logInclick" style="-fx-background-color: #C4A484;" text="Log in" textFill="#1c1853" underline="true">
                <font>
                   <Font name="Microsoft YaHei Light" size="15.0" />
                </font>
