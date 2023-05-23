@@ -1,2 +1,4 @@
-package com.example.messenger;public class signUpController {
+package com.example.messenger;
+
+public class signUpController {
 }

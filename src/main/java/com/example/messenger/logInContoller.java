@@ -1,2 +1,4 @@
-package com.example.messenger;public class logInContoller {
+package com.example.messenger;
+
+public class logInContoller {
 }
