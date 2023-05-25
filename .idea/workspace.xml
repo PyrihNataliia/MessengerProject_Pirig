@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f157823f-a76b-40cd-96e7-060d68164212" name="Changes" comment="GUI for client main page was done. Server side Swing graphics was done.">
+    <list default="true" id="f157823f-a76b-40cd-96e7-060d68164212" name="Changes" comment="Some add-ons for the design of the project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/ServerLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/logInContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/logInContoller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/signUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/signUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/logIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/logIn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/signUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/signUp.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +45,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Документы/Кросс-платформенное программирование/Проекты/demo3",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Документы/Кросс-платформенное программирование/Курсовой/Messenger&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.messenger.Main" />
@@ -105,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684858874668</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Some add-ons for the design of the project">
+      <created>1684870886125</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684870886125</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +129,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="GUI for client main page was done. Server side Swing graphics was done." />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI for client main page was done. Server side Swing graphics was done." />
+    <MESSAGE value="Some add-ons for the design of the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some add-ons for the design of the project" />
   </component>
 </project>

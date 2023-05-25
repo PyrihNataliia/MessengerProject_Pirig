@@ -45,8 +45,11 @@ public class Server extends JFrame{
             startButton.setEnabled(false);
             stopButton.setEnabled(true);
 
-            while(true){
+           while(true){
+
                 Socket clientSocket= serverSocket.accept();
+                System.out.println("new user");
+                new Thread(new ServerLogic(clientSocket)).start();
             }
 
         } catch (IOException e) {
