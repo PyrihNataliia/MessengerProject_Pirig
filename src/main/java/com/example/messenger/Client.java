@@ -25,7 +25,7 @@ public class Client {
 
     public void initializeUser(String name, String password, String type ){
 
-        String str= String.format("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?> <name>%s</name><password>%s</password>", name, password);
+        String str= String.format("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><user><name>%s</name><password>%s</password></user>", name, password);
         try {
             bufferedWriter.write(str);
             bufferedWriter.newLine();

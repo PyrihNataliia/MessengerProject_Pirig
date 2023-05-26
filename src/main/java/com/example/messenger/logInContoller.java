@@ -28,12 +28,6 @@ public class logInContoller {
 
     @FXML
     void initialize(){
-        ////////
-        try {
-            client = new Client(new Socket(tf_ip.getText().trim(), 8080));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
         bt_signUp_l.setOnAction(event->{
             bt_signUp_l.getScene().getWindow().hide();
             FXMLLoader fxmlLoader = new FXMLLoader(logInContoller.class.getResource("signUp.fxml"));
@@ -52,8 +46,12 @@ public class logInContoller {
             String Name=tf_userName.getText().trim();
             String Password= tf_password.getText().trim();
             String ip= tf_ip.getText().trim();
-
             if(!Name.isBlank()&& !Password.isBlank()&& !ip.isBlank()){
+                try {
+                    client = new Client(new Socket(tf_ip.getText().trim(), 8080));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 client.initializeUser(Name, Password, "logIn");
             }
             else{

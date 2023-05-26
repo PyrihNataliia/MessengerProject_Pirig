@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f157823f-a76b-40cd-96e7-060d68164212" name="Changes" comment="Some add-ons for the design of the project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/ServerLogic.java" afterDir="false" />
+    <list default="true" id="f157823f-a76b-40cd-96e7-060d68164212" name="Changes" comment="Basic functions for client server connection">
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/SaxParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/logInContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/logInContoller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/signUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/signUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/logIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/logIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/ServerLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ServerLogic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +49,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Документы/Кросс-платформенное программирование/Курсовой/Messenger&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Документы/Кросс-платформенное программирование/Проекты/demo2&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.Main">
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684870886125</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Basic functions for client server connection">
+      <created>1685035797222</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685035797222</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="GUI for client main page was done. Server side Swing graphics was done." />
     <MESSAGE value="Some add-ons for the design of the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some add-ons for the design of the project" />
+    <MESSAGE value="Basic functions for client server connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic functions for client server connection" />
   </component>
 </project>
