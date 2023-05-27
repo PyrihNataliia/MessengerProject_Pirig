@@ -1,15 +1,14 @@
 package com.example.messenger;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.Socket;
+import java.util.Optional;
 
 public class signUpController {
     @FXML
@@ -20,39 +19,49 @@ public class signUpController {
     TextField tf_name_s;
     @FXML
     TextField tf_password_s;
+    private Client client;
+    private CommonMethods commonMethods= new CommonMethods();
 
     @FXML
     void initialize(){
+
         bt_sigup_s.setOnAction(event->{
             String Name=tf_name_s.getText().trim();
             String Password= tf_password_s.getText().trim();
 
             if(!Name.isBlank()&& !Password.isBlank()){
-
+                try {
+                    client = new Client(new Socket("localhost", 8080));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                client.initializeUser(Name, Password, "signUp");
+                String status="Success";
+                if(status.equals("Success")){
+                    commonMethods.changeScene(bt_sigup_s,"hello-view.fxml", "Main page" );
+                }
+                else{
+                    Alert alert= new Alert(Alert.AlertType.CONFIRMATION,"Do you already have an account?" , ButtonType.YES,ButtonType.NO);
+                    alert.setTitle("Have an account?");
+                    Optional<ButtonType> result=alert.showAndWait();
+                    if(result.get()==ButtonType.NO){
+                        commonMethods.alertMessage("Wrong input","Sorry, but this username is taken. Choose another one!", "Try to sign up again" );
+                        tf_password_s.clear();
+                    }
+                    else{
+                        commonMethods.alertMessage("Log in","Please, log in","");
+                        commonMethods.changeScene(bt_login_s, "logIn.fxml", "Log in form");
+                    }
+                }
             }
             else{
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error");
-                alert.setHeaderText("Double check your input");
-                alert.setContentText("You haven't enter your username or password!");
-                alert.showAndWait();
+                commonMethods.alertMessage("Error", "Double check your input", "You haven't enter your username or password!");
             }
         });
     }
     @FXML
     public void logInclick(){
-        bt_login_s.getScene().getWindow().hide();
-            FXMLLoader fxmlLoader = new FXMLLoader(signUpController.class.getResource("logIn.fxml"));
-            try {
-                fxmlLoader.load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            Parent root =fxmlLoader.getRoot();
-            Stage stage= new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Log in form");
-            stage.show();
+        commonMethods.changeScene(bt_login_s, "logIn.fxml", "Log in form");
     }
 
 

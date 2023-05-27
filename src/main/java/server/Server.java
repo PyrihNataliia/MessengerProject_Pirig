@@ -5,10 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.net.SocketException;
 import java.time.LocalDateTime;
-import java.net.Socket;
-
 
 public class Server extends JFrame{
     private ServerSocket serverSocket;
@@ -70,8 +69,8 @@ public class Server extends JFrame{
             while(true){
                 try {
                     Socket clientSocket = serverSocket.accept();
-                    System.out.println("new user");
                     new Thread(new ServerLogic(clientSocket)).start();
+                    isStarted = true;
 
                 } catch (IOException e) {
                     throw new RuntimeException(e);
@@ -83,8 +82,9 @@ public class Server extends JFrame{
         int stopQuestion= JOptionPane.showConfirmDialog(this, "Do you confirm the stop of the server?","Confirm the stop", JOptionPane.YES_NO_OPTION);
         if(stopQuestion==JOptionPane.YES_OPTION){
             try {
+                if(serverSocket!=null){
                 serverSocket.close();
-                System.out.println(serverSocket.isClosed());
+                System.out.println(serverSocket.isClosed());}
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

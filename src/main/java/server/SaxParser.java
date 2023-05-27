@@ -5,11 +5,9 @@ import org.xml.sax.*;
 public class SaxParser extends DefaultHandler{
 
     private String thisElement = "";
-    private String name;
-   private String password;
+    User user= new User();
+   private String transferType;
 
-   private String sendTo;
-   private String text;
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
@@ -17,16 +15,13 @@ public class SaxParser extends DefaultHandler{
     }
     public void characters(char[] ch, int start, int length) throws SAXException {
         if (thisElement.equalsIgnoreCase("name")){
-            name= new String(ch, start, length);
+            user.setName(new String(ch, start, length));
         }
        else if(thisElement.equalsIgnoreCase("password")){
-           password=new String(ch, start, length);
+           user.setPassword(new String(ch, start, length));
         }
-       else if(thisElement.equalsIgnoreCase("sendto")){
-           sendTo=new String(ch, start, length);
-        }
-        else if(thisElement.equalsIgnoreCase("text")){
-            text=new String(ch, start, length);
+        else if(thisElement.equalsIgnoreCase("type")){
+            transferType=new String(ch, start, length);
         }
     }
     @Override
@@ -34,20 +29,13 @@ public class SaxParser extends DefaultHandler{
         thisElement="";
     }
 
-    public String getName(){
-        return name;
+    public User getUser(){
+        return user;
     }
 
-    public String getPassword(){
-        return password;
+    public String getType(){
+        return transferType;
     }
 
-    public String getSendTo(){
-        return sendTo;
-    }
-
-    public String getText(){
-        return text;
-    }
 
 }

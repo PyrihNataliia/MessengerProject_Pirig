@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f157823f-a76b-40cd-96e7-060d68164212" name="Changes" comment="Basic functions for client server connection">
-      <change afterPath="$PROJECT_DIR$/src/main/java/server/SaxParser.java" afterDir="false" />
+    <list default="true" id="f157823f-a76b-40cd-96e7-060d68164212" name="Changes" comment="Creation of SaxParser">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/CommonMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/DeserializeClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/database/Configs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/database/Consts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/database/DbHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/logInContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/logInContoller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/signUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/signUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/SaxParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/SaxParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/ServerLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ServerLogic.java" afterDir="false" />
     </list>
@@ -49,14 +59,19 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Документы/Кросс-платформенное программирование/Проекты/demo2&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Документы/Кросс-платформенное программирование/Курсовой/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.messenger.Main" />
       <module name="Messenger" />
@@ -85,8 +100,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
