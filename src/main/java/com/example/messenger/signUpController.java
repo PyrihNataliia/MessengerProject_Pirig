@@ -19,7 +19,7 @@ public class signUpController {
     TextField tf_name_s;
     @FXML
     TextField tf_password_s;
-    private Client client;
+    private ClientConnection clientConnection=ClientConnection.getInstance();
     private CommonMethods commonMethods= new CommonMethods();
 
     @FXML
@@ -30,12 +30,7 @@ public class signUpController {
             String Password= tf_password_s.getText().trim();
 
             if(!Name.isBlank()&& !Password.isBlank()){
-                try {
-                    client = new Client(new Socket("localhost", 8080));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-                client.initializeUser(Name, Password, "signUp");
+                clientConnection.getClient().initializeUser(Name, Password, "signUp");
                 String status="Success";
                 if(status.equals("Success")){
                     commonMethods.changeScene(bt_sigup_s,"hello-view.fxml", "Main page" );

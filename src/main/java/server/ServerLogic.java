@@ -65,7 +65,8 @@ public class ServerLogic implements Runnable {
         else if(type.equals("signUp")){
             status = initializeUser();
         }
-        String str= String.format("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><message><type>%s</type><status>%s<status></message>", type, status);
+        System.out.println("Ready to send message");
+        String str= String.format("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><message><type>%s</type><status>%s</status></message>", type, status);
         sendToUser(str);
     }
 
@@ -75,11 +76,9 @@ public class ServerLogic implements Runnable {
         String status= checkPresence(rs);
         System.out.println(status);
         if(status.equals("Success")){
-            System.out.println("The name is taken");
            return "Fail" ;
         }
         else{
-        System.out.println("We can register");
         dbHandler.WriteUser(user);
         return "Success";
         }
@@ -102,9 +101,11 @@ public class ServerLogic implements Runnable {
            throw new RuntimeException(e);
        }
        if(counter==1){
+           /////
        System.out.println("Ok");
        return "Success";}
        else{
+           //////
            System.out.println("Problem");
            return "Fail";
        }

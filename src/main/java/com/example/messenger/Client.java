@@ -1,13 +1,8 @@
 package com.example.messenger;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
-
 import java.io.*;
 import java.net.Socket;
+
 
 public class Client {
 
@@ -15,6 +10,7 @@ public class Client {
     private BufferedWriter bufferedWriter;
 
     private BufferedReader bufferedReader;
+    private DeserializeClass ds;
 
 
     public Client(Socket socket){
@@ -40,6 +36,21 @@ public class Client {
             throw new RuntimeException(e);
         }
 
+    }
+    private void workWithMessages(){
+        try {
+            String messageFromServer= bufferedReader.readLine();
+            System.out.println(messageFromServer);
+            ds = new DeserializeClass(messageFromServer);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    public String getStatus(){
+        workWithMessages();
+        System.out.println(ds.getStatus());
+        return ds.getStatus();
     }
     private void cleanAndClose() {
         if(bufferedWriter!= null || bufferedReader!=null){
